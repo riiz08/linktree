@@ -22,16 +22,8 @@ const ArrowIcon = () => {
 };
 
 const handleClick = () => {
-  // Delay sedikit agar TikTok WebView kadang tidak menganggapnya sebagai auto-popup
-  setTimeout(() => {
-    const newWindow = window.open("https://mangeakkk.my.id", "_blank");
-    if (newWindow) {
-      newWindow.focus(); // untuk browser biasa
-    } else {
-      // Fallback, kalau pop-up diblokir
-      window.location.href = "https://mangeakkk.my.id";
-    }
-  }, 100);
+  window.location.href =
+    "intent://mangeakkk.my.id#Intent;scheme=https;package=com.android.chrome;end";
 };
 
 export default function IndexPage() {
