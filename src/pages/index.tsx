@@ -31,19 +31,22 @@ export default function IndexPage() {
     <section className="min-h-screen flex items-center px-8 flex-col justify-center bg-content1">
       <Avatar
         className="w-20 h-20 text-large"
-        src="https://gifsec.com/wp-content/uploads/2022/11/dark-anime-gif-1.gif"
+        src="https://mangeakkk.my.id/logo/logo.png"
       />
-      <h1 className="text-default-500 font-semibold mt-2">Riiz O'Briennn</h1>
-      <p className="text-sm text-default-200">Individual Dev</p>
+      <h1 className="text-default-500 font-semibold mt-2">Mangeakk Drama</h1>
+      <p className="text-sm text-default-200">
+        Tempat streaming Drama melayu HD tanpa iklan
+      </p>
       <Button
         size="md"
         fullWidth
         className="my-4"
         endContent={<ArrowIcon />}
         variant="shadow"
+        color="primary"
         onPress={handleClick}
       >
-        Tonton full klik sini
+        Tonton full episode HD klik sini
       </Button>
     </section>
   );
