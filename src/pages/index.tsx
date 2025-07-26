@@ -1,29 +1,21 @@
 import { Avatar } from "@heroui/avatar";
 import { Button } from "@heroui/button";
 
-const ArrowIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-arrow-right-icon lucide-arrow-right"
-    >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-    </svg>
-  );
-};
-
 const handleClick = () => {
-  window.location.href =
-    "intent://mangeakkk.my.id#Intent;scheme=https;package=com.android.chrome;end";
+  const ua = navigator.userAgent.toLowerCase();
+  const isAndroid = ua.includes("android");
+  const isIos = /iphone|ipad|ipod/.test(ua);
+
+  const targetUrl = "https://mangeakkk.my.id";
+
+  if (isAndroid) {
+    window.location.href =
+      "intent://mangeakkk.my.id#Intent;scheme=https;package=com.android.chrome;end";
+  } else if (isIos) {
+    window.open(targetUrl, "_blank");
+  } else {
+    window.open(targetUrl, "_blank");
+  }
 };
 
 export default function IndexPage() {
@@ -35,18 +27,21 @@ export default function IndexPage() {
       />
       <h1 className="text-default-500 font-semibold mt-2">Mangeakk Drama</h1>
       <p className="text-sm text-default-200">
-        Tempat streaming Drama melayu HD tanpa iklan
+        Tempat streaming Drama melayu HD tanpa iklan mengganggu
       </p>
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhE_XJ9TyHXdeE5eJ5DvHqQ0wiR4eYyfiT3H5KOFu9Su3zl-4srnIeEuuZE22E6ukGszw-49J435kct8A1j0yQIWzO2lUhEn_Ijs5lHyrnCPLOUjAaNjm3tWmEYrr4FGYmZLnI4_ACS9GK8/s1600/Mm7OeTA.gif"
+        className="w-24 my-4"
+      />
       <Button
         size="md"
         fullWidth
-        className="my-4"
-        endContent={<ArrowIcon />}
+        className="my-4 font-bold"
         variant="shadow"
-        color="primary"
+        color="danger"
         onPress={handleClick}
       >
-        Tonton full episode HD klik sini
+        Tonton Sekarang
       </Button>
     </section>
   );
