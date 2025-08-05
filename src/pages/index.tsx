@@ -2,20 +2,8 @@ import { Avatar } from "@heroui/avatar";
 import { Button } from "@heroui/button";
 
 const handleClick = () => {
-  const ua = navigator.userAgent.toLowerCase();
-  const isAndroid = ua.includes("android");
-  const isIos = /iphone|ipad|ipod/.test(ua);
-
-  const targetUrl = "https://mangeakkk.my.id";
-
-  if (isAndroid) {
-    window.location.href =
-      "intent://mangeakkk.my.id#Intent;scheme=https;package=com.android.chrome;end";
-  } else if (isIos) {
-    window.open(targetUrl, "_blank");
-  } else {
-    window.open(targetUrl, "_blank");
-  }
+  window.location.href =
+    "intent://mangeakkk.my.id#Intent;scheme=https;package=com.android.chrome;end";
 };
 
 export default function IndexPage() {
@@ -25,8 +13,8 @@ export default function IndexPage() {
         className="w-20 h-20 text-large"
         src="https://mangeakkk.my.id/logo/logo.png"
       />
-      <h1 className="text-default-500 font-semibold mt-2">Mangeakk Drama</h1>
-      <p className="text-sm text-default-200">
+      <h1 className="text-default-900 font-bold mt-2">Mangeakk Drama</h1>
+      <p className="text-xs text-default-600 text-center">
         Tempat streaming Drama melayu HD tanpa iklan mengganggu
       </p>
       <img
