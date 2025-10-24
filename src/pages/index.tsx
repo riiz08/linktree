@@ -38,8 +38,8 @@ export default function IndexPage() {
       />
 
       <p className="text-default-foreground text-sm bg-red-600 p-4 rounded-md mb-4">
-        Notes: Tekan tombol copy kat bawah lepas tuh paste ke google, sebab
-        tiktok tak support buka link bawah ni
+        Notes: Tekan tombol copy kat bawah lepas tuh paste dalam
+        chrome/google/safari, sebab tiktok tak support buka link bawah ni
       </p>
       <Input
         isReadOnly
@@ -55,25 +55,6 @@ export default function IndexPage() {
             variant="shadow"
             color="primary"
             onPress={() => handleCopy("web")}
-          >
-            Copy
-          </Button>
-        }
-      />
-      <Input
-        isReadOnly
-        name="tele"
-        id="tele"
-        className="max-w-xs mt-2"
-        defaultValue="https://t.me/+pBH5WCVyC0wxNWRl"
-        label="Link Telegram"
-        type="text"
-        endContent={
-          <Button
-            size="sm"
-            variant="shadow"
-            color="primary"
-            onPress={() => handleCopy("tele")}
           >
             Copy
           </Button>
